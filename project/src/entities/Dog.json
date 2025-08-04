@@ -1,0 +1,47 @@
+{
+  "name": "Dog",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the dog"
+    },
+    "breed": {
+      "type": "string",
+      "description": "Breed of the dog"
+    },
+    "age": {
+      "type": "number",
+      "description": "Age of the dog in years"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Weight of the dog in pounds"
+    },
+    "color": {
+      "type": "string",
+      "description": "Primary color of the dog"
+    },
+    "personality": {
+      "type": "string",
+      "description": "Personality traits of the dog"
+    },
+    "isAdopted": {
+      "type": "boolean",
+      "description": "Whether the dog has been adopted"
+    },
+    "ownerName": {
+      "type": "string",
+      "description": "Name of the dog's owner if adopted"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the dog"
+    }
+  },
+  "required": [
+    "name",
+    "breed",
+    "age"
+  ]
+}
