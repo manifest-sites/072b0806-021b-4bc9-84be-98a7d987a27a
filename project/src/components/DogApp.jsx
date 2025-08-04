@@ -81,20 +81,20 @@ function DogApp() {
   })
 
   const getDogAvatar = (dog) => {
-    const colors = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae', '#52c41a', '#eb2f96']
+    const colors = ['#ff4500', '#8b00ff', '#ffd700', '#00ced1', '#32cd32', '#ff1493', '#ff6347', '#9370db', '#00fa9a', '#ff8c00']
     const colorIndex = dog.name.length % colors.length
     return colors[colorIndex]
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 p-4">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8 text-center">
-          <Title level={1} className="text-blue-600">🐕 Dog Adoption Center</Title>
+          <Title level={1} className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">🐕 Dog Adoption Center</Title>
           <Text type="secondary" className="text-lg">Find your perfect furry friend</Text>
         </div>
 
-        <div className="mb-6 bg-white p-4 rounded-lg shadow-sm">
+        <div className="mb-6 bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg shadow-lg border border-yellow-200">
           <Row gutter={[16, 16]} align="middle">
             <Col xs={24} sm={8}>
               <Input
@@ -156,7 +156,7 @@ function DogApp() {
                   hoverable
                   className="h-full"
                   cover={
-                    <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                    <div className="h-48 bg-gradient-to-br from-cyan-200 via-pink-200 to-yellow-200 flex items-center justify-center">
                       <Avatar
                         size={80}
                         src={`https://api.dicebear.com/7.x/bottts/svg?seed=${dog.name}`}
@@ -165,7 +165,7 @@ function DogApp() {
                     </div>
                   }
                   actions={[
-                    dog.isAdopted ? <HeartFilled style={{ color: '#ff4d4f' }} /> : <HeartOutlined />,
+                    dog.isAdopted ? <HeartFilled style={{ color: '#ff1493' }} /> : <HeartOutlined style={{ color: '#ff69b4' }} />,
                     <EditOutlined onClick={() => handleEdit(dog)} />,
                     <DeleteOutlined onClick={() => handleDelete(dog._id)} />
                   ]}
@@ -174,7 +174,7 @@ function DogApp() {
                     title={
                       <div className="flex items-center justify-between">
                         <span>{dog.name}</span>
-                        <Tag color={dog.isAdopted ? 'red' : 'green'}>
+                        <Tag color={dog.isAdopted ? 'magenta' : 'cyan'}>
                           {dog.isAdopted ? 'Adopted' : 'Available'}
                         </Tag>
                       </div>
